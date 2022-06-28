@@ -18,6 +18,15 @@ prevBtn.addEventListener("click", function () {
 });
 
 function carousel() {
+    // working with slides
+    if(counter === slides.length){
+        counter = 0;
+    }
+    if(counter < 0){
+        counter = slides.length -1;
+    }
+
+
   slides.forEach(function (slide) {
     slide.style.transform = `translateX(-${counter * 100}%)`;
   });
